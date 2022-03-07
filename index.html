@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1 class="logo"><img src="images/logo.png" alt="MAKE MOVIE"></h1>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#Feature">特徴</a></li>
+                    <li><a href="#Question">よくあるご質問</a></li>
+                    <li><a href="#Contact">お申し込み</a></li>
+                </ul>
+            </nav>
+            <div class="sp_menu_btn"><span></span></div>
+            <nav class="sp_nav">
+                <ul>
+                    <li><a href="#Feature">特徴</a></li>
+                    <li><a href="#Question">よくあるご質問</a></li>
+                    <li><a href="#Contact">お申し込み</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <!-- メインビジュアル -->
+            <section class="main_visual">
+                <h2>動画制作を<br class="sp_br">新たなスキルに</h2>
+            </section>
+            <!-- 特徴 -->
+            <section id="Feature" class="feature">
+                <h2 class="title">特徴</h2>
+                <ul class="feature_lists">
+                    <li>
+                        <p class="feature_img"><img src="images/main_1.jpg" alt="短期集中のイメージ画像"></p>
+                        <h3 class="feature_title">短期間集中型</h3>
+                        <p class="feature_text">
+                            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+                    </li>
+                    <li>
+                        <p class="feature_img"><img src="images/main_2.jpg" alt="短期集中のイメージ画像"></p>
+                        <h3 class="feature_title">質問無制限</h3>
+                        <p class="feature_text">
+                            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+
+                    </li>
+                    <li>
+                        <p class="feature_img"><img src="images/main_3.jpg" alt="短期集中のイメージ画像"></p>
+                        <h3 class="feature_title">現役のクリエイター</h3>
+                        <p class="feature_text">
+                            この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+                    </li>
+                </ul>
+            </section>
+            <!-- よくあるご質問 -->
+            <section id="Question" class="question">
+                <h2 class="title">よくあるご質問</h2>
+                <dl class="question_lists">
+                    <dt>
+                        <span>Q</span>
+                        <p>学べる動画制作ツールはなんですか？</p>
+                    </dt>
+                    <dd>
+                        <span>A</span>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+                    </dd>
+                    <dt>
+                        <span>Q</span>
+                        <p>YouTuberになりたいのですが、YouTuberになれますか？</p>
+                    </dt>
+                    <dd>
+                        <span>A</span>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+                    </dd>
+                    <dt>
+                        <span class="">Q</span>
+                        <p>支払い方法でクレジットカードは使えますか？</p>
+                    </dt>
+                    <dd>
+                        <span>A</span>
+                        <p>この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、量、字間、行間等を確認するために入れています。この文章はダミーです。文字の大きさ、
+                        </p>
+                    </dd>
+                </dl>
+                <!-- お申し込み -->
+            </section>
+            <section id="Contact" class="contact">
+                <h2 class="title">お申し込み</h2>
+                <p class="contact_text">定員ございますので<br class="sp_br">お早めにお申し込みください。</p>
+                <p class="contact_btn"><a href="#">今すぐ申し込む</a></p>
+            </section>
+        </main>
+        <footer>
+            <p class="copy">© 2021 MAKE MOVIE</p>
+        </footer>
+    </div>
+    <script>
+        //    アコーディオンメニュー
+        $(function() {
+            $('.question_lists dd').hide();
+            $('.question_lists dt').click(function() {
+                $(this).toggleClass('open');
+                $(this).next().slideToggle();
+            })
+        });
+
+        //ハンバーガーメニュー動かす
+        $('.sp_menu_btn,.sp_nav a').click(function() {
+            $('.sp_nav').fadeToggle();
+            $('.sp_menu_btn').toggleClass('open');
+        });
+
+    </script>
+
+</body>
+
+</html>

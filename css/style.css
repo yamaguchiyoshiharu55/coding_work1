@@ -1,0 +1,386 @@
+@charset "utf-8";
+/*reset*/
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+li,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-family: YuGothic, "Yu Gothic Medium", "Hiragino Sans",
+        "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+    color: #333;
+}
+
+img {
+    vertical-align: bottom;
+    border: none;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 共通 */
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.sp_br {
+    display: none;
+}
+
+/* header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+.logo {
+    width: 238px;
+}
+
+.pc_nav ul {
+    display: flex;
+}
+
+.pc_nav li + li {
+    margin-left: 30px;
+}
+
+.sp_nav {
+    display: none;
+}
+
+.sp_menu_btn {
+    display: none;
+}
+
+/* メインビジュアル */
+
+.main_visual {
+    background: url(../images/MV.jpg) no-repeat center center/cover;
+    padding: 225px 0;
+    margin-bottom: 50px;
+}
+
+.main_visual h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 48px;
+}
+
+/* 特徴 */
+.feature {
+    margin-bottom: 100px;
+}
+
+.feature_lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feature_lists li {
+    width: 30%;
+}
+
+.feature_lists .feature_img {
+    margin-bottom: 10px;
+}
+
+.feature_img img {
+    width: 100%;
+}
+
+.feature_lists .feature_title {
+    display: inline-block;
+    background: linear-gradient(transparent 60%, #ffdc81 60%);
+    margin-bottom: 7px;
+    font-size: 22px;
+}
+
+.feature_lists .feature_text {
+    line-height: 1.5;
+}
+
+/* よくあるご質問 */
+.question {
+    margin-bottom: 100px;
+}
+
+.question_lists span {
+    font-size: 28px;
+    padding: 0 10px;
+}
+
+.question_lists dt {
+    display: flex;
+    font-size: 18px;
+    border-bottom: 1px dashed #333;
+    padding: 20px 70px 20px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.question_lists dt::before,
+.question_lists dt::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    right: 20px;
+    background: #333;
+}
+
+.question_lists dt::before {
+    transition: 0.3s;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.question_lists dt::after {
+    transition: 0.3s;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}
+
+.question_lists .open::after {
+    transform: rotate(0deg);
+}
+
+.question_lists dt p {
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+.question_lists dd {
+    display: flex;
+    background: #eee;
+    padding: 20px 0;
+}
+
+.question_lists dd p {
+    line-height: 1.5;
+    margin-top: 2px;
+}
+
+/* お申し込み */
+.contact {
+    margin-bottom: 100px;
+}
+
+.contact_text {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.contact_btn {
+    text-align: center;
+    font-size: 18px;
+}
+
+.contact_btn a {
+    display: inline-block;
+    padding: 19px 0;
+    width: 300px;
+    background: #f25962;
+    border-radius: 30px;
+    color: #fff;
+}
+
+/* footer */
+footer {
+    border-top: 1px dashed #333;
+    padding: 30px 0;
+}
+
+.copy {
+    text-align: center;
+    font-size: 14px;
+}
+
+/*改行コード*/
+.sp_br {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+
+    /* 共通 */
+    .wrap {
+        padding: 0;
+    }
+
+    .sp_br {
+        display: block;
+    }
+
+    /* header */
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo {
+        width: 218px;
+        padding-left: 10px;
+    }
+
+    .pc_nav {
+        display: none;
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        justify-content: center;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .sp_nav li {
+        color: #333;
+        text-align: center;
+        font-size: 30px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium",
+            "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        padding: 30px 0;
+    }
+
+    .sp_menu_btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 10000;
+        cursor: pointer;
+        height: 30px;
+        display: block;
+    }
+
+    .sp_menu_btn span {
+        width: 33px;
+        height: 2px;
+        display: block;
+        background: #333;
+        position: relative;
+        top: 20px;
+        transition: 0.3s;
+    }
+
+    .sp_menu_btn span::before,
+    .sp_menu_btn span::after {
+        width: 33px;
+        height: 2px;
+        content: "";
+        background: #333;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .sp_menu_btn span::before {
+        bottom: 10px;
+    }
+
+    .sp_menu_btn span::after {
+        top: 10px;
+    }
+
+    /* メニューが開いた時 */
+    .open span {
+        background: transparent;
+    }
+
+    .open span::before {
+        transform: rotate(45deg);
+        bottom: 0;
+    }
+
+    .open span::after {
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    /* メインビジュアル */
+
+    .main_visual {
+        padding: 92px 0;
+        margin-bottom: 30px;
+    }
+
+    .main_visual h2 {
+        text-align: left;
+        padding-left: 10px;
+        box-sizing: border-box;
+        font-size: 38px;
+        line-height: 1.5;
+    }
+
+    /* 特徴 */
+    .feature {
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+
+    .feature_lists {
+        display: block;
+    }
+
+    .feature_lists li {
+        width: 100%;
+    }
+
+    /* QA */
+    .question {
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+
+    /* Contact */
+    .question {
+        padding: 0 10px;
+        margin-bottom: 50px;
+    }
+
+    /*    改行コード*/
+    .sp_br {
+        display: block;
+    }
+
+
+}
